@@ -18,9 +18,9 @@ fn main() -> eframe::Result {
         ..Default::default()
     };
     eframe::run_native(
-        "eframe template",
+        "Game of Life",
         native_options,
-        Box::new(|cc| Ok(Box::new(game_of_life::TemplateApp::new(cc)))),
+        Box::new(|cc| Ok(Box::new(game_of_life::GameOfLife::new(cc)))),
     )
 }
 
@@ -50,7 +50,7 @@ fn main() {
             .start(
                 canvas,
                 web_options,
-                Box::new(|cc| Ok(Box::new(game_of_life::TemplateApp::new(cc)))),
+                Box::new(|cc| Ok(Box::new(game_of_life::GameOfLife::new(cc)))),
             )
             .await;
 
